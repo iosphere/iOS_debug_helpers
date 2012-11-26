@@ -8,6 +8,7 @@
 
 #import "ISHDebugHelpers.h"
 
+#warning Make sure to not include any symbols in AppStore builds 
 @implementation ISHDebugHelpers
 
 + (NSString *)debugHelpersBasePath {

@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#ifdef DEBUG
 @interface ISHDebugHelpers : NSObject
 + (NSString *)debugHelpersBasePath;
 + (NSString *)debugHelpersScreenshotPath;
 + (NSString *)debugHelpersArchivePath;
 + (void)debugHelpersSetup;
 @end
+#endif

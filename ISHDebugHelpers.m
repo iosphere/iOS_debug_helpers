@@ -8,9 +8,8 @@
 
 #import "ISHDebugHelpers.h"
 
-#warning Make sure to not include any symbols in AppStore builds 
+#ifdef DEBUG
 @implementation ISHDebugHelpers
-
 + (NSString *)debugHelpersBasePath {
     return [NSTemporaryDirectory () stringByAppendingPathComponent:@"current"];
 }
@@ -47,5 +46,5 @@
     [[NSFileManager defaultManager] removeItemAtPath:[NSTemporaryDirectory () stringByAppendingPathComponent:@"current"] error:nil];
     [[NSFileManager defaultManager] createSymbolicLinkAtPath:[NSTemporaryDirectory () stringByAppendingPathComponent:@"current"] withDestinationPath:targetDir error:nil];
 }
-
 @end
+#endif

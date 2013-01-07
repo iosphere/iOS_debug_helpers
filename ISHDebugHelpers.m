@@ -8,7 +8,7 @@
 
 #import "ISHDebugHelpers.h"
 
-#ifdef DEBUG
+#if defined DEBUG || RUN_KIF_TESTS
 @implementation ISHDebugHelpers
 + (NSString *)debugHelpersBasePath {
     return [NSTemporaryDirectory () stringByAppendingPathComponent:@"current"];

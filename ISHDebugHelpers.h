@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#if defined DEBUG || RUN_KIF_TESTS 
+#if defined DEBUG || RUN_KIF_TESTS || RUN_CAL_TESTS
 @interface ISHDebugHelpers : NSObject
 + (NSString *)debugHelpersBasePath;
 + (NSString *)debugHelpersScreenshotPath;
